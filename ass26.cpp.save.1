@@ -1,0 +1,31 @@
+
+//A program in which you define two separate arrays of type Property data struc$
+//and uses pointers to compare, find and print out those elemnts of arrays whic$
+//values for house, car and boat are the same.
+#include <iostream>
+using namespace std;
+
+const int LENGTH=3;
+
+ struct Property{
+ char house[10];
+ unsigned short car;
+ unsigned short boat;
+};
+
+int main(void) {
+
+ int i,j;
+ char *p1, *p2;
+ p1=&friends[0];
+ p2=&friends[1];
+
+ for(i=0; i<3;i++){
+         for(j=1; j<4; j++){
+                 if(*(p1+i)==*(p2+i)){
+                         cout<<"Same properties are :"<<*(p1+i)<<" and "<<(p2+j)<<endl;
+                 }
+         }
+ }
+
+}
